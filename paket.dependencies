@@ -2,4 +2,15 @@ source https://api.nuget.org/v3/index.json
 
 storage: none
 framework: netcore3.1, netstandard2.0, netstandard2.1
+
+group Server
+    nuget Fable.Core
+    nuget Fable.Elmish.Browser
+    nuget Fable.Elmish.Debugger
+    nuget Fable.Elmish.HMR
+    nuget Fable.Elmish.React
+    nuget FSharp.Core
+    
+    clitool dotnet-fable
+    
 nuget fake
