@@ -1,4 +1,4 @@
-﻿namespace Web
+﻿namespace Template
 
 open Fable.React
 open Fable.React.Props
