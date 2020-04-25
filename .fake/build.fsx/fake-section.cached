@@ -1,3 +1,4 @@
+#r "netstandard"
 #r "paket:
 nuget Fake.DotNet.Cli
 nuget Fake.IO.FileSystem
