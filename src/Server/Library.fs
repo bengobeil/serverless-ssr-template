@@ -1,7 +1,7 @@
 ﻿namespace Web
 
-open Fable.Helpers.React
-open Fable.Helpers.React.Props
+open Fable.React
+open Fable.React.Props
 
 module SSR =
     type Model = {Counter: int option}
@@ -21,6 +21,6 @@ module SSR =
                 link [ Href "https://fonts.googleapis.com/css?family=Open+Sans"; Rel "stylesheet" ]
                 link [ Rel "shortcut icon"; Type "image/png"; Href "/favicon.png" ] ]
             body [ ] [
-                div [ Id "elmish-app" ] [ view model ignore ]
+                div [ Id "elmish-app" ] [ ]
                 script [ ] [ RawText (sprintf "var __INIT_MODEL__ = %s" (Thoth.Json.Encode.Auto.toString(0,model))) ]
                 script [ Src "./bundle.js" ] [ ] ] ]
