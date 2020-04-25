@@ -1,11 +1,14 @@
 ﻿namespace Template
 
+open Shared
 open Fable.React
 open Fable.React.Props
 
-module SSR =
-    type Model = {Counter: int option}
-    let initialModel () = { Counter = Some 42 }
+module Server =
+    let rand = System.Random()
+
+    let initialModel () = { Counter = Some { Value = rand.Next(0, 50) } }
+    
     let makeInitialHtml model =
         html [ ] [
             head [ ] [
