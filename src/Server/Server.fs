@@ -24,6 +24,6 @@ module Server =
                 link [ Href "https://fonts.googleapis.com/css?family=Open+Sans"; Rel "stylesheet" ]
                 link [ Rel "shortcut icon"; Type "image/png"; Href "/favicon.png" ] ]
             body [ ] [
-                div [ Id "elmish-app" ] [ ]
+                div [ Id "elmish-app" ] [ Shared.view model ignore ]
                 script [ ] [ RawText (sprintf "var __INIT_MODEL__ = %s" (Thoth.Json.Encode.Auto.toString(0,model))) ]
                 script [ Src "./bundle.js" ] [ ] ] ]

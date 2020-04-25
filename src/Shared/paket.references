@@ -1,4 +1,4 @@
-group Client
-Fable.Core
-Fable.React
-Fulma
+group Shared
+    Fable.Core
+    Fable.React
+    Fulma
